@@ -100,6 +100,22 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure.recovery=0
 
 # Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio.common-util.vendor \
+    android.hardware.audio.common@5.0.vendor \
+    android.hardware.audio.common@6.0-util.vendor \
+    android.hardware.audio.common@6.0.vendor \
+    android.hardware.audio.common@7.0-util.vendor \
+    android.hardware.audio.common@7.0.vendor \
+    android.hardware.audio.effect@6.0-util.vendor \
+    android.hardware.audio.effect@6.0.vendor \
+    android.hardware.audio.effect@7.0-util.vendor \
+    android.hardware.audio.effect@7.0.vendor \
+    android.hardware.audio@6.0.vendor \
+    android.hardware.audio@6.0-util.vendor \
+    android.hardware.audio@7.0-util.vendor \
+    android.hardware.audio@7.0.vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -116,7 +132,72 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio@2.0.vendor \
+    android.hardware.bluetooth.audio@2.1.vendor \
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth@1.1.vendor
+
+# Biometrics
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.common-V1-ndk_platform.vendor \
+    android.hardware.biometrics.face-V1-ndk_platform.vendor \
+    android.hardware.biometrics.fingerprint@2.1.vendor \
+    android.hardware.biometrics.fingerprint@2.2.vendor \
+    android.hardware.biometrics.fingerprint@2.3.vendor
+
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.common@1.0.vendor \
+    android.hardware.camera.device@3.2.vendor \
+    android.hardware.camera.device@1.0.vendor \
+    android.hardware.camera.device@3.3.vendor \
+    android.hardware.camera.device@3.4.vendor \
+    android.hardware.camera.device@3.5.vendor \
+    android.hardware.camera.device@3.6.vendor \
+    android.hardware.camera.provider@2.4.vendor \
+    android.hardware.camera.provider@2.5.vendor \
+    android.hardware.camera.provider@2.6.vendor
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0.vendor \
+    android.hardware.drm@1.1.vendor \
+    android.hardware.drm@1.2.vendor \
+    android.hardware.drm@1.3.vendor \
+    android.hardware.drm@1.4.vendor
+
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0.vendor \
+    android.hardware.graphics.allocator@3.0.vendor \
+    android.hardware.graphics.allocator@4.0.vendor \
+    android.hardware.graphics.composer@2.1-resources.vendor \
+    android.hardware.graphics.composer@2.1.vendor \
+    android.hardware.graphics.composer@2.2-resources.vendor \
+    android.hardware.graphics.composer@2.2.vendor
+
+# Health
+PRODUCT_PACKAGES += \
+   android.hardware.health@1.0.vendor \
+   android.hardware.health@2.0.vendor \
+   android.hardware.health@2.1.vendor
+
+# GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss.measurement_corrections@1.0.vendor \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor \
+    android.hardware.gnss@1.0.vendor \
+    android.hardware.gnss@1.1.vendor \
+    android.hardware.gnss@2.0.vendor \
+    android.hardware.gnss@2.1.vendor
+
 # Media
+PRODUCT_PACKAGES += \
+    libavservices_minijail_vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
@@ -129,7 +210,98 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
+# Soundtrigger
+PRODUCT_PACKAGES += \
+    android.hardware.soundtrigger@2.1.vendor \
+    android.hardware.soundtrigger@2.2.vendor \
+    android.hardware.soundtrigger@2.3.vendor
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0.vendor \
+    android.hardware.sensors@2.0.vendor \
+    android.hardware.sensors@2.1.vendor \
+    android.hardware.sensors@2.0-ScopedWakelock.vendor \
+    android.frameworks.sensorservice@1.0.vendor \
+    libsensorndkbridge
+
+# Keymaster
+PRODUCT_PACKAGES += \
+   android.hardware.keymaster-V3-ndk_platform.vendor \
+   android.hardware.keymaster@3.0.vendor \
+   android.hardware.keymaster@4.0.vendor
+
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.0.vendor \
+    android.hardware.radio.config@1.1.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio@1.0.vendor \
+    android.hardware.radio@1.1.vendor \
+    android.hardware.radio@1.2.vendor \
+    android.hardware.radio@1.3.vendor \
+    android.hardware.radio@1.4.vendor \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio@1.6.vendor
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0.vendor \
+    android.hardware.power@1.1.vendor \
+    android.hardware.power@1.2.vendor
+
+# Fastboot
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd
+
+# Secure Element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0.vendor \
+    android.hardware.secure_element@1.1.vendor \
+    android.hardware.secure_element@1.2.vendor
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0.vendor \
+    android.hardware.thermal@2.0.vendor
+
+# Neural Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.0.vendor \
+    android.hardware.neuralnetworks@1.1.vendor \
+    android.hardware.neuralnetworks@1.2.vendor \
+    android.hardware.neuralnetworks@1.3.vendor \
+    libtextclassifier_hash.vendor
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0.vendor \
+    android.hardware.usb@1.1.vendor \
+    android.hardware.usb@1.2.vendor \
+    android.hardware.usb@1.3.vendor \
+    android.hardware.usb.gadget@1.0.vendor \
+    android.hardware.usb.gadget@1.1.vendor
+
 # WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi.hostapd@1.0.vendor \
+    android.hardware.wifi.hostapd@1.1.vendor \
+    android.hardware.wifi.hostapd@1.2.vendor \
+    android.hardware.wifi.hostapd@1.3.vendor \
+    android.hardware.wifi.supplicant@1.0.vendor \
+    android.hardware.wifi.supplicant@1.1.vendor \
+    android.hardware.wifi.supplicant@1.2.vendor \
+    android.hardware.wifi.supplicant@1.3.vendor \
+    android.hardware.wifi.supplicant@1.4.vendor \
+    android.hardware.wifi@1.0.vendor \
+    android.hardware.wifi@1.1.vendor \
+    android.hardware.wifi@1.2.vendor \
+    android.hardware.wifi@1.3.vendor \
+    android.hardware.wifi@1.4.vendor \
+    android.hardware.wifi@1.5.vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
