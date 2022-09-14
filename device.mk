@@ -59,12 +59,29 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
 
-# Init
-PRODUCT_COPY_FILES += \
-    device/xiaomi/pissarro/rootdir/etc/init.mt6877.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.mt6877.rc 
-
-# Vendor_overlay
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/pissarro/vendor_overlay,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/)
+# Rootdir
+PRODUCT_PACKAGES += \
+    factory_init.connectivity.rc \
+    factory_init.project.rc \
+    factory_init.rc \
+    fstab.emmc \
+    fstab.mt6877 \
+    init.mt6877.rc \
+    fstab.enableswap \
+    init.mt6877.usb.rc \
+    init.aee.rc \
+    init.ago.rc \
+    init.connectivity.rc \
+    init.mi_thermald.rc \
+    init.modem.rc \
+    init.project.rc \
+    init.sensor_2_0.rc \
+    meta_init.connectivity.rc \
+    meta_init.modem.rc \
+    meta_init.project.rc \
+    meta_init.rc \
+    multi_init.rc \
+    ueventd.mtk.rc
 
 # Lights
 PRODUCT_PACKAGES += \
