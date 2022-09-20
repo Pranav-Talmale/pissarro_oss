@@ -13,6 +13,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Include proprietary blobs
 $(call inherit-product, vendor/xiaomi/pissarro/pissarro-vendor.mk)
 
+# Include proprietary IMS blobs
+$(call inherit-product, vendor/xiaomi/pissarro-ims/pissarro-ims-vendor.mk)
+
 # A/B
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
