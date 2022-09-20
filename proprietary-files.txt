@@ -2449,7 +2449,6 @@ vendor/lib64/libsensor_custom.so
 vendor/lib64/libssccalapi.so
 
 # Soter
--app/SoterService/SoterService
 vendor/bin/hw/vendor.microtrust.hardware.soter@1.0-service
 vendor/bin/SoterProvisioningTool
 vendor/etc/init/vendor.microtrust.hardware.soter@1.0-service.rc
@@ -2590,7 +2589,6 @@ vendor/lib64/hw/vibrator.default.so
 vendor/lib64/vendor.xiaomi.hardware.vibratorfeature@1.0.so
 
 # WiFi
-bin/iwpriv
 vendor/bin/hw/android.hardware.wifi@1.0-service-lazy
 vendor/bin/iwpriv
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
@@ -3431,6 +3429,15 @@ vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/etc/xgf.cfg
+vendor/lib/modules/bt_drv.ko
+vendor/lib/modules/conninfra.ko
+vendor/lib/modules/fmradio_drv.ko
+vendor/lib/modules/fpsgo.ko
+vendor/lib/modules/gps_drv.ko
+vendor/lib/modules/kheaders.ko
+vendor/lib/modules/met.ko
+vendor/lib/modules/wlan_drv_gen4m.ko
+vendor/lib/modules/wmt_chrdev_wifi.ko
 vendor/lib/android.hidl.allocator@1.0.so
 vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/AVCSecureVdecCA.so
