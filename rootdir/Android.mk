@@ -5,7 +5,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := factory_init.connectivity.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := factory_init.connectivity.rc
+LOCAL_SRC_FILES    := etc/factory_init.connectivity.rc
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
@@ -13,7 +13,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := factory_init.project.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := factory_init.project.rc
+LOCAL_SRC_FILES    := etc/factory_init.project.rc
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
@@ -61,7 +61,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := init.mt6877.usb.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init.mt877.usb.rc
+LOCAL_SRC_FILES    := etc/init.mt6877.usb.rc
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
