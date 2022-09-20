@@ -1,9 +1,9 @@
 # Dynamic Partitions
-system                             /system               ext4     ro        wait,slotselect,logical,first_stage_mount
-vendor                             /vendor               ext4     ro        wait,slotselect,logical,first_stage_mount
-product                            /product              ext4     ro        wait,slotselect,logical,first_stage_mount
-system_ext                         /system_ext           ext4     ro        wait,logical,first_stage_mount,slotselect
-odm                                /odm                  ext4     ro        wait,slotselect,logical,first_stage_mount
+system                             /system               ext4     ro        wait,slotselect,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+vendor                             /vendor               ext4     ro        wait,slotselect,logical,first_stage_mount,avb
+product                            /product              ext4     ro        wait,slotselect,logical,first_stage_mount,avb
+system_ext                         /system_ext           ext4     ro        wait,logical,first_stage_mount,slotselect,avb
+odm                                /odm                  ext4     ro        wait,slotselect,logical,first_stage_mount,avb 
 
 # Userdata
 /dev/block/by-name/metadata        /metadata             ext4     noatime,nosuid,nodev,discard      wait,check,formattable,first_stage_mount
@@ -15,7 +15,7 @@ odm                                /odm                  ext4     ro        wait
 # Other
 /dev/block/by-name/vbmeta          /vbmeta               emmc     defaults    defaults
 /dev/block/by-name/vbmeta_vendor   /vbmeta_vendor        emmc     defaults    first_stage_mount,nofail,slotselect
-/dev/block/by-name/vbmeta_system   /vbmeta_system        emmc     defaults    first_stage_mount,nofail,slotselect
+/dev/block/by-name/vbmeta_system   /vbmeta_system        emmc     defaults    first_stage_mount,nofail,slotselect,avb=vbmeta
 /dev/block/by-name/boot            /boot                 emmc     defaults    first_stage_mount,nofail,slotselect
 /dev/block/by-name/odmdtbo         /odmdtbo              emmc     defaults    defaults
 /dev/block/by-name/dtbo            /dtbo                 emmc     defaults    defaults
