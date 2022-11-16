@@ -96,6 +96,7 @@ PRODUCT_COPY_FILES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
+    factory_init.connectivity.common.rc \
     factory_init.connectivity.rc \
     factory_init.project.rc \
     factory_init.rc \
@@ -106,11 +107,15 @@ PRODUCT_PACKAGES += \
     init.mt6877.usb.rc \
     init.aee.rc \
     init.ago.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
     init.connectivity.rc \
     init.mi_thermald.rc \
     init.modem.rc \
     init.project.rc \
     init.sensor_2_0.rc \
+    init_conninfra.rc \
+    meta_init.connectivity.common.rc \
     meta_init.connectivity.rc \
     meta_init.modem.rc \
     meta_init.project.rc \
